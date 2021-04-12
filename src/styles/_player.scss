@@ -1,0 +1,85 @@
+.Player {
+	min-height: 15vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+.time-controller {
+	width: 50%;
+	display: flex;
+	margin-top: 13px;
+	height: 30%;
+	input {
+		width: 100%;
+		-webkit-appearance: none;
+		cursor: pointer;
+		background: transparent;
+	}
+	p {
+		padding: 0rem 1rem 0rem 1rem;
+	}
+}
+.play-controller {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0rem 0rem 1rem 0rem;
+	width: 30%;
+	svg {
+		cursor: pointer;
+	}
+}
+input[type="range"]:focus {
+	outline: none;
+}
+input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 16px;
+	width: 16px;
+}
+input[type="range"]::-moz-slider-thumb {
+	-webkit-appearance: none;
+	background: transparent;
+	border: none;
+}
+.track {
+	position: relative;
+	background: lightblue;
+	border-radius: 1rem;
+	overflow: hidden;
+	width: 100%;
+	height: 1rem;
+}
+.animate-track {
+	background: linear-gradient(to right, rgb(245, 245, 245), rgb(204, 204, 204));
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(50%);
+	pointer-events: none;
+}
+@media screen and (max-width: 768px) {
+	.time-controller {
+		width: 90%;
+		p {
+			padding: 0rem;
+		}
+	}
+	.play-controller {
+		width: 60%;
+	}
+}
+@media screen and (max-width: 900px) {
+	.time-controller {
+		width: 70%;
+		p {
+			padding: 0;
+		}
+	}
+	.play-controller {
+		width: 60%;
+	}
+}
